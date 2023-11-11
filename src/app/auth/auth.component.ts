@@ -15,18 +15,21 @@ export class AuthComponent {
   passwordFormControl = new FormControl('', [Validators.required]);
   reTypePasswordFormControl = new FormControl('', [Validators.required]);
   viewType: string = 'login';
+
   constructor(private authService:AuthService, private router:Router){}
+  
   onLogin(){
     let email=this.emailFormControl.getRawValue()!;
     let password=this.passwordFormControl.getRawValue()!;
     this.authService.login(email,password).subscribe((response: any) => {
       console.log(response);
+      localStorage.setItem("token",response.token);
       alert(response.message);
       this.router.navigate(["/events"]);
     })
 
   }
-  public onRegister(): void {
+  public onRegister() {
     let firstName = this.firstNameFormControl.getRawValue()!;
     let lastName = this.lastNameFormControl.getRawValue()!;
     let email = this.emailFormControl.getRawValue()!;

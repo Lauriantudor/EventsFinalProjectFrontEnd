@@ -12,7 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { EventPageComponent } from './event-page/event-page.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +32,7 @@ import { NewCategoryPageComponent } from './new-category-page/new-category-page.
 import { MatDialogModule} from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { AuthComponent } from './auth/auth.component';
+import { CustomInterceptor } from './services/custom.interceptor';
 
 
 @NgModule({
@@ -73,7 +74,10 @@ import { AuthComponent } from './auth/auth.component';
    
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass:CustomInterceptor,
+    multi: true
+}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
