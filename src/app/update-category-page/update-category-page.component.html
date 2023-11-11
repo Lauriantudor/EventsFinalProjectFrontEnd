@@ -1,0 +1,4 @@
+<div class="update-category" *ngIf="updateCategory!= null">
+    <h1>Update category {{updateCategory.name}}</h1>
+	<app-category-form [category]="updateCategory"></app-category-form>
+</div>

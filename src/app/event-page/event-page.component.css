@@ -1,0 +1,19 @@
+.event-card {
+	width: 300px;
+	margin: 30px 15px 0 15px ;
+	     
+  }
+  .event-card-img {
+	height: 150px;
+	object-fit: contain;
+  }
+  .event-card-content {
+	padding-top: 20px;
+	height: 100px;
+	overflow: hidden;
+  }
+  .event-div{
+	display: flex;
+    margin-left: 750px;
+    align-items: center;
+}

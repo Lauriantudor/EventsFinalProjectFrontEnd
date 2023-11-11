@@ -1,0 +1,10 @@
+.mat-card-custom-header {
+                                        padding :15px;
+                                        background:bisque;
+                                        cursor:pointer;
+                                        transition: background-color .3s;
+                                        }
+                                      .mat-card-custom-header:hover{
+                                        background: #F8743AFF;
+                                      }
+                                      

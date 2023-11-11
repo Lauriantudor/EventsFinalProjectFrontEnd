@@ -1,0 +1,19 @@
+.div-container{display:flex;
+}
+
+.card-container{
+  background: white;width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vh;
+}
+
+.data-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-full-width {
+  width: 100%;
+}

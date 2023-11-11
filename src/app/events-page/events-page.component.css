@@ -1,0 +1,18 @@
+.event-card-container{
+	padding:0 20px 0 20px;
+	/*display:flex;*/
+	flex-wrap: wrap;
+	justify-content:space-between;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.events-container{
+	align-items: center;
+}
+                                      
+.events-container h1,
+.events-container h3 {
+	text-align: center;
+	margin: 10px 0;
+}
+                                      

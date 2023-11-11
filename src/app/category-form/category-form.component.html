@@ -1,0 +1,13 @@
+<div>
+	<form [formGroup]="categoryForm" (ngSubmit)="saveOrUpdateCategory()" class="category-form">
+	  <mat-form-field>
+		<mat-label>Category name</mat-label>
+		<input matInput formControlName="nameInput" />
+	  </mat-form-field>
+	
+	  	<button *ngIf="category.id == null" mat-raised-button type="submit" color="primary">Save</button>
+		  <button *ngIf="category.id != null" mat-raised-button type="submit" color="primary">Update</button>
+	
+
+	</form >
+  </div> 

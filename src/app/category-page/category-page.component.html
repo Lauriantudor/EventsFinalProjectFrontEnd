@@ -1,0 +1,23 @@
+<h1>Category</h1>
+<div class="category-div">
+
+<mat-card class="category-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{category.name}}</mat-card-title>
+
+
+<mat-card-actions>
+<button mat-raised-button color="primary" [routerLink]= "updateCategoryUrl" >Update</button>
+<button mat-raised-button color="warn" (click)=" openConfirmationDialog()">Delete</button>
+</mat-card-actions>
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
+
+  <h1 *ngIf="events.length>0">Events of this category are</h1>
+
+  <div class="cards_list">
+    <app-events-cards *ngFor="let event of events" [event]="event" (click)="navigateToEvent(event)" ></app-events-cards>
+  </div>
+</div>

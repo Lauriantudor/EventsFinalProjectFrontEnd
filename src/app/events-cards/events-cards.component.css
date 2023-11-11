@@ -1,0 +1,14 @@
+.event-card {
+  width: 300px;
+  margin: 30px 15px 0 15px ;
+  cursor: pointer;
+}
+.event-card-img {
+  height: 250px;
+  object-fit: contain;
+}
+.event-card-content {
+  padding-top: 20px;
+  height: 100px;
+  overflow: hidden;
+}

@@ -1,0 +1,15 @@
+<div class="events-container">
+    <h1>Events</h1>
+	<h3>
+	<button mat-fab color="primary" routerLink="/new-event">
+		<mat-icon>add</mat-icon>
+	</button>
+	</h3>
+
+	<div class="event-card-container">
+		<app-events-cards
+		 *ngFor="let event of events" 
+		 [event]="event" (click)="navigateToEvent(event)"
+		 ></app-events-cards>
+	</div>
+</div>

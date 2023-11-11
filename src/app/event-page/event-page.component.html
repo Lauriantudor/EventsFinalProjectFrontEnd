@@ -1,0 +1,18 @@
+<div class="event-div">
+<mat-card class="event-card">
+	<mat-card-header>
+	  <mat-card-title>{{event.name}}</mat-card-title>
+	  <mat-card-subtitle>Locxation: {{event.location}}, Period: {{event.startDate?.toLocaleDateString("ro-RO")}} - {{event.endDate?.toLocaleDateString("ro-RO")}}</mat-card-subtitle>
+	</mat-card-header>
+	<img class="event-card-img" mat-card-image src="{{event.imgUrl ? event.imgUrl : 'https://tinyurl.com/mvpk5u97'}}" alt="Photo of a Shiba Inu">
+	<mat-card-content class="event-card-content">
+	  <p>{{event.description}}</p>
+	</mat-card-content>
+	
+	<mat-card-actions>
+		<button mat-raised-button color="primary" [routerLink]="updateEventUrl">Update</button>
+			<button mat-raised-button color="warn" (click)=" openConfirmationDialog()">Delete</button>
+	  </mat-card-actions>
+	
+  </mat-card>
+</div>  		

@@ -1,0 +1,12 @@
+<div class="cartegory-container">
+    <h1>Categories</h1>
+	<button mat-fab color="primary" routerLink="/new-category">
+		<mat-icon>add</mat-icon>
+	</button>
+	<div class="category-card-container">
+		<app-category-item
+		 *ngFor="let category of categories" 
+		 [category]="category" (click)="navigateToCategory(category)"
+		 ></app-category-item>
+	</div>
+</div>

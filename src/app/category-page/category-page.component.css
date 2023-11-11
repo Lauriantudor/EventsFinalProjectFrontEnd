@@ -1,0 +1,38 @@
+.category-card{
+                                        /*width:1300px;*/
+                                        margin: 50px auto;
+                                        background: bisque;
+                                        width: 80vw;
+                                      
+                                      }
+                                      .category-card-image{
+                                        height:300px;
+                                        object-fit: cover;
+                                      }
+                                      .category-card-content{
+                                        padding-top: 20px;
+                                        height:100px;
+                                        overflow: hidden;
+                                      }
+                                      .category-div{
+                                        /*display: flex;*/
+                                        justify-content:center;
+                                        align-items: center;
+                                        margin: 0 auto;
+                                      }
+                                      
+                                      h1{
+                                        /*display:flex;*/
+                                        /*margin-left:500px;*/
+                                        margin-top: 20px;
+                                        font-size:xx-large;
+                                        text-align: center;
+                                      }
+                                      
+                                      .cards_list {
+                                        width: 80vw;
+                                        margin: 25px auto;
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                      }
+                                      
